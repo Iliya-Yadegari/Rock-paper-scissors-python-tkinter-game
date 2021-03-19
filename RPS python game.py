@@ -15,7 +15,7 @@ def Prs():
     while player == False:
     
         player = player_ent.get()    
-    
+
         if player == computer:
             txt = "Tie!"
         elif player == "Rock":
@@ -36,11 +36,10 @@ def Prs():
         else:
             txt = "That's not a valid play. Check your spelling!"
     
-        res_label = Label(window,text = txt).grid(row = 2, column = 0, padx = 10, pady = 10)
+        res_label = Label(window,text = txt).grid(row = 3, column = 0, padx = 10, pady = 10)
     
-        #playAgain_lbl = Label(window,text = 'Do you want to play again?').grid(row = 3, column = 0, padx = 10, pady = 10)    
     
-        player = False
+    
         computer = t[randint(0,2)]
         
 main_frm = LabelFrame(window)
@@ -48,6 +47,7 @@ main_frm = LabelFrame(window)
 player_lbl = Label(main_frm,text = 'Rock, Paper, Scissors?').grid(row = 0, column = 0, padx = 10, pady = 10)
 player_ent = Entry(main_frm)
 submit_btn = Button(window,text = 'Submit',width = 20, height = 3,command = Prs).grid(row = 1, column = 0, padx = 10, pady = 10)
+quit_btn = Button(window,text = 'Exit',width = 20, height = 3, command = window.destroy).grid(row = 2, column = 0, pady = 10, padx = 20)
 
 main_frm.grid(row = 0, column = 0, padx = 10, pady = 10)
 player_ent.grid(row = 0, column = 1, padx = 10, pady = 10)
