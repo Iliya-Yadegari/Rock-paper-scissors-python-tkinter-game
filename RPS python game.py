@@ -36,7 +36,7 @@ def Prs():
         else:
             txt = "That's not a valid play. Check your spelling!"
     
-        res_label = Label(window,text = txt).grid(row = 5, column = 0, padx = 10, pady = 10)
+        messagebox.showinfo('Result',txt)
     
     
     
